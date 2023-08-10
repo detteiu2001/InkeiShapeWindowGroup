@@ -6,12 +6,12 @@ public class Tama extends JFrame {
         left,
         right
     }
-    Tama(side side){
-        int xpos = 180;
+    Tama(int size,int xpos,int ypos,side side){
+        int xposi = xpos - size;
         if (Objects.requireNonNull(side) == Tama.side.right) {
-            xpos = 220;
+            xposi = xpos + size;
         }
-        setBounds(xpos,280,20,20);
+        setBounds(xposi,ypos + (size * 4),size,size);
         setUndecorated(true);
     }
     public void render() {

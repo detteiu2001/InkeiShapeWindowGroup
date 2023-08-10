@@ -1,8 +1,8 @@
 import javax.swing.*;
 
 public class Sao extends JFrame {
-    Sao(){
-        setBounds(200,200,20,100);
+    Sao(int size, int xpos, int ypos){
+        setBounds(xpos,ypos,size,(size * 5));
         setUndecorated(true);
     }
 
